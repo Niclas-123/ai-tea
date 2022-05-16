@@ -354,49 +354,187 @@ figure {
   margin: 0;
 }
 
-:root {
-  --header-side-padding-desktop: 14.3%;
+@font-face {
+  font-family: "bebas_neue";
+  src: url("/fonts/bebas_neue/BebasNeue-Regular.eot");
+  src: url("/fonts/bebas_neue/BebasNeue-Regular.woff") format("woff"), url("/fonts/bebas_neue/BebasNeue-Regular.otf") format("opentype");
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 16px;
+  background-color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.main-container {
+  background-image: url("/images/other/background_pattern.png");
+  max-width: 1600px;
+  padding: 150px 0;
+  margin: 0 auto;
+  position: relative;
 }
 
 header {
   background-color: white;
-  padding-left: var(--header-side-padding-desktop);
-  padding-right: var(--header-side-padding-desktop);
+  padding-left: 14.3%;
+  padding-right: 14.3%;
   padding-bottom: 25px;
   padding-top: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header .header-logo {
-  width: 180px;
-}
-
-header .instagram-logo {
-  width: 55px;
 }
 
 header nav {
+  margin: auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .header-logo {
+  width: 180px;
+}
+
+header nav .instagram-logo {
   margin: auto 0;
+}
+
+header nav .instagram-logo img {
+  width: 55px;
+}
+
+header nav button {
+  margin-right: 4%;
+}
+
+header nav ul {
+  padding: 0;
+  margin: auto 10%;
+  list-style: none;
+  font-family: 'bebas_neue';
+  font-size: 1.875rem;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  white-space: nowrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav ul li {
+  margin: 0 10%;
+}
+
+.header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+@media only screen and (min-width: 56.5625rem) {
+  .header-container {
+    margin-left: 10%;
+    margin-right: 15%;
+  }
+}
+
+@media only screen and (max-width: 56.5625rem) {
+  .header-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.header-container .bottles-container {
+  background-image: url("/images/other/Sonne.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media only screen and (min-width: 56.5625rem) {
+  .header-container .bottles-container {
+    width: 60%;
+  }
+}
+
+.header-container .bottles-container img {
+  margin: 25% auto 5% auto;
+  width: 95%;
+}
+
+.header-container .logo-container {
+  margin: 200px auto;
+}
+
+@media only screen and (max-width: 56.5625rem) {
+  .header-container .logo-container {
+    margin: 0 auto;
+  }
+}
+
+.header-container .logo-container__bio-logos {
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: auto 0;
+}
+
+.header-container .logo-container__bio-logos img {
+  height: 100px;
+  margin: 0 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.primary-button {
+  background-color: black;
+  padding: 0.5rem 3rem;
+  border-radius: 1.25rem;
+  border: none;
+  white-space: nowrap;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'bebas_neue';
+  font-size: 1.875rem;
 }
 /*# sourceMappingURL=index.css.map */

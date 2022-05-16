@@ -1,35 +1,51 @@
 header {
   background-color: white;
-  padding-left: var(--header-side-padding-desktop);
-  padding-right: var(--header-side-padding-desktop);
+  padding-left: 14.3%;
+  padding-right: 14.3%;
   padding-bottom: 25px;
   padding-top: 25px;
 
-  display: flex;
-
-  .header-logo {
-    width: 180px;
-  }
-
-  .instagram-logo {
-    width: 55px;
-  }
-
   nav {
-    flex-grow: 1;
     margin: auto 0;
     display: flex;
+    flex-grow: 1;
+    align-items: center;
 
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
+    .header-logo {
+      width: 180px;
+    }
+
+    .instagram-logo {
       margin: auto 0;
 
-      li {
+      img{
+        width: 55px;
       }
+    }
+
+    button {
+      margin-right: 4%;
+    }
+
+    ul {
+      padding: 0;
+      margin: auto 10%;
+      list-style: none;
+
+      font-family: 'bebas_neue';
+      font-size: 1.875rem;
+
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      flex-grow: 1;
+
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        margin: 0 10%;
+      }
+
     }
   }
 }
