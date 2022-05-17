@@ -606,6 +606,10 @@ header nav ul li {
   padding-top: 10%;
 }
 
+.sorten__text-container * {
+  width: 80%;
+}
+
 .sorten__text-container h3 {
   font-family: 'gallardo';
   font-size: 13.5rem;
