@@ -1,0 +1,64 @@
+.sorten {
+  background-image: url("/images/other/background_pattern_1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2 {
+    font-family: 'bebas_neue';
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 7.75rem;
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__bottle-container {
+    flex: 1 1 0px;
+    position: relative;
+
+    &--bottle {
+      display: block;
+      margin: 0 auto;
+      height: 871px;
+    }
+
+    &--fruit {
+      z-index: 3;
+      position: absolute;
+      width: 60%;
+      top: 650px;
+      left: 280px;
+    }
+  }
+
+  &__text-container {
+    flex: 1 1 0px;
+    padding-top: 10%;
+
+    h3 {
+      font-family: 'gallardo';
+      font-size: 13.5rem;
+      font-weight: 400;
+      margin: 0 0 0 -50px;
+    }
+
+    h4 {
+      font-family: 'breeze_sans';
+      font-weight: 656;
+      font-size: 2.4rem;
+    }
+
+    p {
+      font-family: 'breeze_sans';
+      font-size: 1.3rem;
+      line-height: 2rem;
+
+      strong {
+        line-height: 3rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+
+.top-section {
+  background-image: url("/images/other/background_pattern.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .top-section-container {
+    padding-top: 150px;
+    display: flex;
+
+    @include breakpointDesktop() {
+      margin-left: 10%;
+      margin-right: 15%;
+    }
+
+    @include breakpointMobile() {
+      flex-direction: column;
+    }
+
+    .bottles-container {
+      background-image: url("/images/other/Sonne.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 80%;
+      align-self: center;
+
+      @include breakpointDesktop() {
+        width: 60%;
+      }
+
+      img {
+        margin: 25% auto 0 auto;
+        width: 95%;
+      }
+    }
+
+    .logo-container {
+      margin: 200px auto;
+
+      @include breakpointMobile() {
+        margin: 0 auto;
+      }
+
+      &__bio-logos {
+        margin-top: 30px;
+        display: flex;
+
+        img {
+          height: 100px;
+          margin: 0 auto;
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}
+
+// * {
+//  outline: 1px red solid;
+//}
+

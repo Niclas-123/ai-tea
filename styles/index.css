@@ -360,6 +360,32 @@ figure {
   src: url("/fonts/bebas_neue/BebasNeue-Regular.woff") format("woff"), url("/fonts/bebas_neue/BebasNeue-Regular.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "gallardo";
+  src: url("/fonts/Gallardo-qZYlq.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "breeze_sans";
+  src: url("/fonts/breeze_sans/BreezeSans-Regular_20150728.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "breeze_sans";
+  src: url("/fonts/breeze_sans/BreezeSans-Bold_20150728.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "breeze_sans";
+  src: url("/fonts/breeze_sans/BreezeSans-Light_20150728.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
 body {
   background-color: black;
   overflow-x: hidden;
@@ -368,6 +394,7 @@ body {
 html {
   font-size: 16px;
   background-color: black;
+  color: white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -391,15 +418,14 @@ a:focus {
 }
 
 .main-container {
-  background-image: url("/images/other/background_pattern.png");
   max-width: 1600px;
-  padding: 150px 0;
   margin: 0 auto;
   position: relative;
 }
 
 header {
   background-color: white;
+  color: black;
   padding-left: 14.3%;
   padding-right: 14.3%;
   padding-bottom: 25px;
@@ -458,21 +484,28 @@ header nav ul li {
   margin: 0 10%;
 }
 
-.header-container {
+.top-section {
+  background-image: url("/images/other/background_pattern.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.top-section .top-section-container {
+  padding-top: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media only screen and (min-width: 56.5625rem) {
-  .header-container {
+  .top-section .top-section-container {
     margin-left: 10%;
     margin-right: 15%;
   }
 }
 
 @media only screen and (max-width: 56.5625rem) {
-  .header-container {
+  .top-section .top-section-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -480,7 +513,7 @@ header nav ul li {
   }
 }
 
-.header-container .bottles-container {
+.top-section .top-section-container .bottles-container {
   background-image: url("/images/other/Sonne.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -491,38 +524,109 @@ header nav ul li {
 }
 
 @media only screen and (min-width: 56.5625rem) {
-  .header-container .bottles-container {
+  .top-section .top-section-container .bottles-container {
     width: 60%;
   }
 }
 
-.header-container .bottles-container img {
-  margin: 25% auto 5% auto;
+.top-section .top-section-container .bottles-container img {
+  margin: 25% auto 0 auto;
   width: 95%;
 }
 
-.header-container .logo-container {
+.top-section .top-section-container .logo-container {
   margin: 200px auto;
 }
 
 @media only screen and (max-width: 56.5625rem) {
-  .header-container .logo-container {
+  .top-section .top-section-container .logo-container {
     margin: 0 auto;
   }
 }
 
-.header-container .logo-container__bio-logos {
+.top-section .top-section-container .logo-container__bio-logos {
   margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.header-container .logo-container__bio-logos img {
+.top-section .top-section-container .logo-container__bio-logos img {
   height: 100px;
   margin: 0 auto;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.sorten {
+  background-image: url("/images/other/background_pattern_1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sorten h2 {
+  font-family: 'bebas_neue';
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 7.75rem;
+  text-align: center;
+}
+
+.sorten__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sorten__bottle-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0px;
+  position: relative;
+}
+
+.sorten__bottle-container--bottle {
+  display: block;
+  margin: 0 auto;
+  height: 871px;
+}
+
+.sorten__bottle-container--fruit {
+  z-index: 3;
+  position: absolute;
+  width: 60%;
+  top: 650px;
+  left: 280px;
+}
+
+.sorten__text-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0px;
+  padding-top: 10%;
+}
+
+.sorten__text-container h3 {
+  font-family: 'gallardo';
+  font-size: 13.5rem;
+  font-weight: 400;
+  margin: 0 0 0 -50px;
+}
+
+.sorten__text-container h4 {
+  font-family: 'breeze_sans';
+  font-weight: 656;
+  font-size: 2.4rem;
+}
+
+.sorten__text-container p {
+  font-family: 'breeze_sans';
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+.sorten__text-container p strong {
+  line-height: 3rem;
 }
 
 .primary-button {
