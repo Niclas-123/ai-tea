@@ -1,23 +1,25 @@
 header {
   background-color: white;
   color: black;
-  padding-left: 14.3%;
-  padding-right: 14.3%;
   padding-bottom: 25px;
   padding-top: 25px;
 
   nav {
-    margin: auto 0;
+    padding-left: clamp(10px, 14.3%, 228px);
+    padding-right: clamp(10px, 14.3%, 228px);
+    max-width: 1600px;
+    margin: auto;
     display: flex;
-    flex-grow: 1;
     align-items: center;
 
     .header-logo {
       width: 180px;
+      display: block;
     }
 
     .instagram-logo {
       margin: auto 0;
+      line-height: 0;
 
       img{
         width: 55px;
@@ -34,7 +36,7 @@ header {
       list-style: none;
 
       font-family: 'bebas_neue';
-      font-size: 1.875rem;
+      font-size: var(--step-1);
 
       flex-wrap: nowrap;
       white-space: nowrap;

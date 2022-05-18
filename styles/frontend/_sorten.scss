@@ -1,13 +1,10 @@
 .sorten {
-  background-image: url("/images/other/background_pattern_1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 
   h2 {
     font-family: 'bebas_neue';
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 7.75rem;
+    font-size: var(--step-6);
     text-align: center;
   }
 
@@ -44,24 +41,22 @@
 
     h3 {
       font-family: 'gallardo';
-      font-size: 13.5rem;
+      font-size: var(--step-8);
       font-weight: 400;
       margin: 0 0 0 -50px;
     }
 
     h4 {
-      font-family: 'breeze_sans';
       font-weight: 656;
-      font-size: 2.4rem;
+      font-size: var(--step-2);
     }
 
     p {
-      font-family: 'breeze_sans';
-      font-size: 1.3rem;
-      line-height: 2rem;
+      font-size: var(--step-0);
+      line-height: 150%;
 
       strong {
-        line-height: 3rem;
+        line-height: 200%;
       }
     }
   }
