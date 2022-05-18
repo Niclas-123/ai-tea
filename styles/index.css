@@ -420,6 +420,7 @@ html {
   background-image: url("/images/other/background.png");
   background-size: cover;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 *,
@@ -524,6 +525,7 @@ header nav ul li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 0 10%;
   }
 }
 
@@ -552,15 +554,16 @@ header nav ul li {
 }
 
 .top-section .top-section-container .logo-container {
-  position: relative;
-  width: 30%;
-  max-width: 100%;
-  margin: 0 auto;
+  margin: 40% auto 0 auto;
+  width: 40%;
 }
 
-@media only screen and (max-width: 56.5625rem) {
+@media only screen and (min-width: 56.5625rem) {
   .top-section .top-section-container .logo-container {
+    width: 30%;
     margin: 0 auto;
+    position: relative;
+    max-width: 100%;
   }
 }
 
@@ -586,7 +589,13 @@ header nav ul li {
 }
 
 .sorten {
-  margin-top: 300px;
+  margin-top: 200px;
+}
+
+@media only screen and (min-width: 56.5625rem) {
+  .sorten {
+    margin-top: 300px;
+  }
 }
 
 .sorten h2 {
@@ -601,6 +610,27 @@ header nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 200px;
+}
+
+@media only screen and (max-width: 56.5625rem) {
+  .sorten__container--right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 var(--space-m);
+  }
+}
+
+@media only screen and (max-width: 56.5625rem) {
+  .sorten__container--left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 0 var(--space-m);
+  }
 }
 
 .sorten__bottle-container {
@@ -620,15 +650,48 @@ header nav ul li {
 
 .sorten__bottle-container:before {
   content: "";
-  width: 120%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: #E0C958;
   mix-blend-mode: overlay;
   position: absolute;
-  top: 12%;
-  right: 20%;
   z-index: 1;
+  width: 180%;
+  top: 15%;
+  right: 12%;
+}
+
+@media only screen and (min-width: 56.5625rem) {
+  .sorten__bottle-container:before {
+    width: 120%;
+    top: 12%;
+    right: 12%;
+  }
+}
+
+.sorten__bottle-container--right:before {
+  left: 12%;
+}
+
+@media only screen and (min-width: 56.5625rem) {
+  .sorten__bottle-container--right:before {
+    left: 12%;
+  }
+}
+
+.sorten__bottle-container--lemon:before {
+  background: #E0C958;
+}
+
+.sorten__bottle-container--peach:before {
+  background: #E99200;
+}
+
+.sorten__bottle-container--pomegranate:before {
+  background: #3e0b02;
+}
+
+.sorten__bottle-container--blackberry:before {
+  background: #E99200;
 }
 
 .sorten__text-container {
@@ -638,15 +701,29 @@ header nav ul li {
   padding-top: 10%;
 }
 
-.sorten__text-container * {
-  width: 80%;
+@media only screen and (min-width: 56.5625rem) {
+  .sorten__text-container--left p, .sorten__text-container--left h4, .sorten__text-container--left h3 {
+    padding-left: 15%;
+  }
+}
+
+@media only screen and (min-width: 56.5625rem) {
+  .sorten__text-container--right * {
+    width: 70%;
+  }
 }
 
 .sorten__text-container h3 {
   font-family: 'gallardo';
   font-size: var(--step-8);
   font-weight: 400;
-  margin: 0 0 0 -50px;
+  margin: 0;
+}
+
+@media only screen and (min-width: 56.5625rem) {
+  .sorten__text-container h3 {
+    margin: 0 0 0 -50px;
+  }
 }
 
 .sorten__text-container h4 {

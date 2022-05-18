@@ -1,5 +1,9 @@
 .sorten {
-  margin-top: 300px;
+  margin-top: 200px;
+
+  @include breakpointDesktop() {
+    margin-top: 300px;
+  }
 
   h2 {
     font-family: 'bebas_neue';
@@ -11,6 +15,21 @@
 
   &__container {
     display: flex;
+    margin-bottom: 200px;
+
+    &--right {
+      @include breakpointMobile() {
+        flex-direction: column;
+        padding: 0 var(--space-m);
+      }
+    }
+
+    &--left {
+      @include breakpointMobile() {
+        flex-direction: column-reverse;
+        padding: 0 var(--space-m);
+      }
+    }
   }
 
   &__bottle-container {
@@ -27,15 +46,55 @@
 
     &:before {
       content: "";
-      width: 120%;
       aspect-ratio: 1;
       border-radius: 50%;
-      background: #E0C958;
       mix-blend-mode: overlay;
       position: absolute;
-      top: 12%;
-      right: 20%;
       z-index: 1;
+
+      width: 180%;
+      top: 15%;
+      right: 12%;
+
+      @include breakpointDesktop() {
+        width: 120%;
+        top: 12%;
+        right: 12%;
+      }
+    }
+
+    &--right {
+      &:before {
+        left: 12%;
+
+        @include breakpointDesktop() {
+          left: 12%;
+        }
+      }
+    }
+
+    &--lemon {
+      &:before {
+        background: #E0C958;
+      }
+    }
+
+    &--peach {
+      &:before {
+        background: #E99200;
+      }
+    }
+
+    &--pomegranate {
+      &:before {
+        background: #3e0b02;
+      }
+    }
+
+    &--blackberry {
+      &:before {
+        background: #E99200;
+      }
     }
   }
 
@@ -43,15 +102,27 @@
     flex: 1 1 0px;
     padding-top: 10%;
 
-    * {
-      width: 80%;
+    &--left {
+      @include breakpointDesktop() {
+        p, h4, h3 {padding-left: 15%;}
+      }
+    }
+
+    &--right {
+      @include breakpointDesktop() {
+        * { width: 70% };
+      }
     }
 
     h3 {
       font-family: 'gallardo';
       font-size: var(--step-8);
       font-weight: 400;
-      margin: 0 0 0 -50px;
+      margin: 0;
+
+      @include breakpointDesktop() {
+        margin: 0 0 0 -50px;
+      }
     }
 
     h4 {
@@ -69,3 +140,4 @@
     }
   }
 }
+
