@@ -417,7 +417,7 @@ html {
   max-width: 1600px;
   position: relative;
   margin: 0 auto;
-  background-image: url("/images/other/bg-1.webp");
+  background-image: url("/images/other/background.png");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -548,8 +548,7 @@ header nav ul li {
 .top-section .top-section-container .bottles-container__background {
   position: relative;
   width: 100%;
-  -webkit-filter: brightness(70%);
-          filter: brightness(70%);
+  opacity: 60%;
 }
 
 .top-section .top-section-container .logo-container {
@@ -586,6 +585,10 @@ header nav ul li {
       justify-content: space-around;
 }
 
+.sorten {
+  margin-top: 300px;
+}
+
 .sorten h2 {
   font-family: 'bebas_neue';
   text-transform: uppercase;
@@ -611,14 +614,21 @@ header nav ul li {
   display: block;
   margin: 0 auto;
   height: 871px;
+  position: relative;
+  z-index: 2;
 }
 
-.sorten__bottle-container--fruit {
-  z-index: 3;
+.sorten__bottle-container:before {
+  content: "";
+  width: 120%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #E0C958;
+  mix-blend-mode: overlay;
   position: absolute;
-  width: 60%;
-  top: 650px;
-  left: 280px;
+  top: 12%;
+  right: 20%;
+  z-index: 1;
 }
 
 .sorten__text-container {
