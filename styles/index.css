@@ -752,4 +752,104 @@ header nav ul li {
   font-family: 'bebas_neue';
   font-size: var(--step-1);
 }
+
+footer {
+  background-color: white;
+  color: black;
+  padding: var(--space-m) 0;
+}
+
+footer p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+footer .imprint-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .imprint-container a {
+  margin: 1rem var(--space-s) auto var(--space-s);
+  color: red;
+}
+
+.team {
+  margin-top: 300px;
+  margin-bottom: 78px;
+}
+
+.team__text-container {
+  width: 42.5%;
+  margin: 0 auto;
+}
+
+.team__text-container h2 {
+  font-family: 'bebas_neue';
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: var(--step-6);
+  text-align: center;
+}
+
+.team__text-container h3 {
+  font-size: var(--step-2);
+  font-weight: 656;
+  text-transform: uppercase;
+}
+
+.team__text-container p {
+  font-size: var(--step-0);
+  line-height: var(--step-1);
+  line-height: 150%;
+}
+
+.team__image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-top: 200px;
+}
+
+.team__image-container--martin {
+  text-align: right;
+}
+
+.team__image-container--contact {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.team__image-container--contact a {
+  line-height: var(--step-1);
+}
+
+.team__image-container--image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.team__image-container img {
+  width: 80%;
+  border: 10px solid white;
+}
 /*# sourceMappingURL=index.css.map */

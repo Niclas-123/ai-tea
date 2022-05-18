@@ -1,0 +1,58 @@
+.team {
+  margin-top: 300px;
+  margin-bottom: 78px;
+
+  &__text-container {
+    width: 42.5%;
+    margin: 0 auto;
+
+    h2 {
+      font-family: 'bebas_neue';
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: var(--step-6);
+      text-align: center;
+    }
+
+    h3 {
+      font-size: var(--step-2);
+      font-weight: 656;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: var(--step-0);
+      line-height: var(--step-1);
+      line-height: 150%;
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 200px;
+
+    &--martin {
+      text-align: right;
+    }
+
+    &--contact {
+      flex: 1 1 0px;
+      align-self: flex-end;
+      a {
+        line-height: var(--step-1);
+      }
+    }
+
+    &--image {
+      flex: 1 1 0px;
+      display: flex;
+      justify-content: center;
+    }
+
+    img {
+      width: 80%;
+      border: 10px solid white
+    }
+  }
+}

@@ -1,0 +1,20 @@
+footer {
+  background-color: white;
+  color: black;
+  padding: var(--space-m) 0;
+
+  p {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .imprint-container {
+    display: flex;
+    justify-content: center;
+
+    a {
+      margin: 1rem var(--space-s) auto var(--space-s);
+      color: red;
+    }
+  }
+}
