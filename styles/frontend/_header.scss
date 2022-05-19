@@ -1,3 +1,5 @@
+* {outline: 1px solid red;}
+
 header {
   background-color: white;
   color: black;
@@ -7,24 +9,20 @@ header {
   .header-logo-mobile {
     display: none;
 
-    @include breakpointMobileMedium() {
+    @include breakpointMobile() {
       display: block;
       width: 25%;
       margin: 0 auto 10px auto;
     }
   }
 
-  nav {
+  .nav-container {
     max-width: 1600px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    padding: 0 5%;
 
     @include breakpointDesktop() {
-      padding-left: clamp(10px, 14.3%, 228px);
-      padding-right: clamp(10px, 14.3%, 228px);
-      justify-content: space-around;
+      display: flex;
+      align-items: center;
+      margin: 0 14.3%;
     }
 
     .home {
@@ -33,51 +31,82 @@ header {
       }
     }
 
-    .header-logo {
-      width: 180px;
-      display: block;
-      @include breakpointMobileMedium() {
-        display: none;
-      }
-    }
 
-    .instagram-logo {
-      margin: auto 0;
-      line-height: 0;
-
-      @include breakpointMobile() {
-        margin-right: 5%;
-      }
-
-      img{
-        width: 55px;
-      }
-    }
-
-    button {
-      margin-right: 4%;
-    }
-
-    ul {
-      padding: 0;
-      list-style: none;
-
-      font-family: 'bebas_neue';
-      font-size: var(--step-1);
-
-      flex-wrap: nowrap;
-      white-space: nowrap;
-      flex-grow: 1;
+    &__logo-container {
       display: flex;
-      justify-content: space-evenly;
+
+      .header-logo {
+        width: 180px;
+        display: inline;
+        flex-grow: 0;
+        margin:  0 auto;
+        align-self: flex-end;
+        @include breakpointMobile() {
+          display: none;
+        }
+      }
+    }
+
+    nav {
+      justify-content: center;
 
       @include breakpointDesktop() {
-        justify-content: space-around;
-        margin: auto 10%;
+        flex-grow: 8;
       }
 
-      li {
-        margin: 0 10%;
+      ul {
+        padding: 0;
+        list-style: none;
+
+        font-family: 'bebas_neue';
+        font-size: var(--step-1);
+
+        flex-wrap: nowrap;
+        white-space: nowrap;
+
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .menu {
+          display: flex;
+          flex-grow: 2;
+
+          @include breakpointDesktop() {
+            justify-content: space-around;
+            margin: 0 5%;
+            flex-grow: 1;
+          }
+        }
+
+        li {
+          @include breakpointMobile() {
+            flex-grow: 1;
+            justify-self: center;
+          }
+        }
+
+        .instagram-logo {
+          display: block;
+          line-height: 0;
+
+          img{
+            width: 55px;
+          }
+        }
+
+        @include breakpointMobile() {
+          margin: auto 10%;
+        }
+
+        @include breakpointDesktop() {
+          justify-content: space-around;
+
+          .button-container {
+            margin-right: 4.5%;
+          }
+        }
       }
     }
   }

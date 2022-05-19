@@ -22,11 +22,11 @@
       font-size: var(--step-2);
       font-weight: 656;
       text-transform: uppercase;
+      line-height: var(--space-l);
     }
 
     p {
       font-size: var(--step-0);
-      line-height: 150%;
     }
   }
 
@@ -34,10 +34,13 @@
     margin: 100px 10% auto 10%;
     font-size: var(--step-0);
     white-space: nowrap;
-    line-height: 180%;
 
     p {
       margin: 0;
+    }
+
+    a {
+      line-height: var(--space-m);
     }
 
     @include breakpointDesktop {

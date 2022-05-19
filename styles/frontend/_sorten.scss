@@ -39,7 +39,7 @@
     &--bottle {
       display: block;
       margin: 0 auto;
-      height: 871px;
+      height: clamp(400px, 871px, 871px);
       position: relative;
       z-index: 2;
     }
@@ -102,10 +102,6 @@
     flex: 1 1 0px;
     padding-top: 10%;
 
-    h3 {
-      white-space: nowrap;
-    }
-
     &--left {
       @include breakpointDesktop() {
         p, h4, h3 {padding-left: 30%;}
@@ -123,6 +119,7 @@
       font-size: var(--step-8);
       font-weight: 400;
       margin: 0;
+      white-space: nowrap;
 
       @include breakpointDesktop() {
         margin: 0 0 0 -50px;
@@ -136,7 +133,6 @@
 
     p {
       font-size: var(--step-0);
-      line-height: 150%;
 
       strong {
         line-height: 200%;
