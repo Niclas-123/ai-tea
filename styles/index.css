@@ -747,12 +747,13 @@ header nav ul li {
   padding-top: 10%;
 }
 
+.sorten__text-container h3 {
+  white-space: nowrap;
+}
+
 @media only screen and (min-width: 56.5625rem) {
   .sorten__text-container--left p, .sorten__text-container--left h4, .sorten__text-container--left h3 {
-    padding-left: 15%;
-  }
-  .sorten__text-container--left h3 {
-    white-space: nowrap;
+    padding-left: 30%;
   }
 }
 
