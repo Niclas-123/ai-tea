@@ -868,8 +868,12 @@ footer .imprint-container a {
 .team__image-container {
   margin: 100px 10% auto 10%;
   font-size: var(--step-0);
-  line-height: 150%;
   white-space: nowrap;
+  line-height: 180%;
+}
+
+.team__image-container p {
+  margin: 0;
 }
 
 @media only screen and (min-width: 56.5625rem) {
@@ -902,10 +906,6 @@ footer .imprint-container a {
       align-self: flex-end;
 }
 
-.team__image-container--contact a {
-  line-height: var(--step-1);
-}
-
 @media only screen and (max-width: 56.5625rem) {
   .team__image-container--contact {
     display: none;
@@ -930,10 +930,9 @@ footer .imprint-container a {
     display: block;
     text-align: center;
   }
-}
-
-.team__image-container--contact-mobile a {
-  line-height: var(--step-1);
+  .team__image-container--contact-mobile div {
+    margin-top: 5%;
+  }
 }
 
 .team__image-container--contact-mobile div {
