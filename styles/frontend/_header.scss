@@ -4,22 +4,50 @@ header {
   padding-bottom: 25px;
   padding-top: 25px;
 
+  .header-logo-mobile {
+    display: none;
+
+    @include breakpointMobileMedium() {
+      display: block;
+      width: 25%;
+      margin: 0 auto 10px auto;
+    }
+  }
+
   nav {
-    padding-left: clamp(10px, 14.3%, 228px);
-    padding-right: clamp(10px, 14.3%, 228px);
     max-width: 1600px;
     margin: auto;
     display: flex;
     align-items: center;
+    padding: 0 5%;
+
+    @include breakpointDesktop() {
+      padding-left: clamp(10px, 14.3%, 228px);
+      padding-right: clamp(10px, 14.3%, 228px);
+      justify-content: space-around;
+    }
+
+    .home {
+      @include breakpointMobile(){
+        display: none;
+      }
+    }
 
     .header-logo {
       width: 180px;
       display: block;
+      @include breakpointMobileMedium() {
+        display: none;
+      }
     }
 
     .instagram-logo {
       margin: auto 0;
       line-height: 0;
+
+      @include breakpointMobile() {
+        margin-right: 5%;
+      }
 
       img{
         width: 55px;
@@ -32,7 +60,6 @@ header {
 
     ul {
       padding: 0;
-      margin: auto 10%;
       list-style: none;
 
       font-family: 'bebas_neue';
@@ -41,14 +68,17 @@ header {
       flex-wrap: nowrap;
       white-space: nowrap;
       flex-grow: 1;
-
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
+
+      @include breakpointDesktop() {
+        justify-content: space-around;
+        margin: auto 10%;
+      }
 
       li {
         margin: 0 10%;
       }
-
     }
   }
 }

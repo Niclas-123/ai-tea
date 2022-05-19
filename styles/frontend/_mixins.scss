@@ -11,3 +11,17 @@
     @content;
   }
 }
+
+@mixin breakpointMobileMedium() {
+  @media only screen and (max-width: 48.125rem) {
+    // 770px
+    @content;
+  }
+}
+
+@mixin breakpointMobileSmall() {
+  @media only screen and (max-width: 34.375rem) {
+    // 550px
+    @content;
+  }
+}
