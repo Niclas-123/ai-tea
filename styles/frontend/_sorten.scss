@@ -33,14 +33,17 @@
   }
 
   &__bottle-container {
-    flex: 1 1 0px;
     position: relative;
+    margin: auto 0;
+
+    @include breakpointDesktop() {
+      width: 50%;
+    }
 
     &--bottle {
       display: block;
-      margin: 0 auto;
-      height: clamp(400px, 871px, 871px);
       position: relative;
+      width: 100%;
       z-index: 2;
     }
 
@@ -52,9 +55,9 @@
       position: absolute;
       z-index: 1;
 
-      width: 700px;
-      top: 15%;
-      right: 10px;
+      width: 100%;
+      top: 10%;
+      right: 22%;
 
       @include breakpointDesktop() {
         width: 120%;
@@ -65,7 +68,7 @@
 
     &--right {
       &:before {
-        left: 12%;
+        left: 22%;
 
         @include breakpointDesktop() {
           left: 12%;

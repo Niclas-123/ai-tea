@@ -459,10 +459,6 @@ a:focus {
   text-decoration: underline;
 }
 
-* {
-  outline: 1px solid red;
-}
-
 header {
   background-color: white;
   color: black;
@@ -752,17 +748,20 @@ header .nav-container nav ul .instagram-logo img {
 }
 
 .sorten__bottle-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0px;
   position: relative;
+  margin: auto 0;
+}
+
+@media only screen and (min-width: 56.5625rem) {
+  .sorten__bottle-container {
+    width: 50%;
+  }
 }
 
 .sorten__bottle-container--bottle {
   display: block;
-  margin: 0 auto;
-  height: clamp(400px, 871px, 871px);
   position: relative;
+  width: 100%;
   z-index: 2;
 }
 
@@ -773,9 +772,9 @@ header .nav-container nav ul .instagram-logo img {
   mix-blend-mode: overlay;
   position: absolute;
   z-index: 1;
-  width: 700px;
-  top: 15%;
-  right: 10px;
+  width: 100%;
+  top: 10%;
+  right: 22%;
 }
 
 @media only screen and (min-width: 56.5625rem) {
@@ -787,7 +786,7 @@ header .nav-container nav ul .instagram-logo img {
 }
 
 .sorten__bottle-container--right:before {
-  left: 12%;
+  left: 22%;
 }
 
 @media only screen and (min-width: 56.5625rem) {
