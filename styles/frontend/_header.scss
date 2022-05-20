@@ -23,30 +23,18 @@ header {
       margin: 0 14.3%;
     }
 
-    .home {
-      @include breakpointMobile(){
+
+    .header-logo {
+      width: 180px;
+      display: inline;
+      margin:  0 auto;
+
+      @include breakpointMobile() {
         display: none;
       }
     }
 
-
-    &__logo-container {
-      display: flex;
-
-      .header-logo {
-        width: 180px;
-        display: inline;
-        flex-grow: 0;
-        margin:  0 auto;
-        align-self: flex-end;
-        @include breakpointMobile() {
-          display: none;
-        }
-      }
-    }
-
     nav {
-      justify-content: center;
 
       @include breakpointDesktop() {
         flex-grow: 8;

@@ -494,39 +494,16 @@ header .nav-container {
   }
 }
 
-@media only screen and (max-width: 56.5625rem) {
-  header .nav-container .home {
-    display: none;
-  }
-}
-
-header .nav-container__logo-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header .nav-container__logo-container .header-logo {
+header .nav-container .header-logo {
   width: 180px;
   display: inline;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
   margin: 0 auto;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
 }
 
 @media only screen and (max-width: 56.5625rem) {
-  header .nav-container__logo-container .header-logo {
+  header .nav-container .header-logo {
     display: none;
   }
-}
-
-header .nav-container nav {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 @media only screen and (min-width: 56.5625rem) {
