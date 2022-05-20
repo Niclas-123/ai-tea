@@ -41,6 +41,7 @@
 
     a {
       line-height: var(--space-m);
+      font-weight: 200;
     }
 
     @include breakpointDesktop {
