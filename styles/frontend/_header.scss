@@ -72,17 +72,17 @@ header {
         }
 
         &__home{
-          flex-grow: 2;
-          margin-left: 3vw;
+          flex-grow: 3;
+          justify-content: flex-end;
         }
 
         &__sorten {
-          flex-grow: 2;
+          flex-grow: 4;
         }
 
         &__team {
-          flex-grow: 2;
-          margin-right: 3vw;
+          flex-grow: 3;
+          justify-content: flex-start;
         }
 
         &__button {
