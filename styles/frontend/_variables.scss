@@ -11,6 +11,7 @@
   --space-3xl: clamp(6.00rem, calc(5.10rem + 4.50vw), 8.25rem);
   --space-4xl: clamp(8.00rem, calc(6.80rem + 6.00vw), 11.00rem);
   --space-5xl: clamp(10.00rem, calc(8.50rem + 7.50vw), 13.75rem);
+  --space-6xl: clamp(15.625rem, 13.352rem + 11.36vw, 21.875rem);
 
   /* One-up pairs */
   --space-3xs-2xs: clamp(0.25rem, calc(0.08rem + 0.88vw), 0.69rem);
@@ -38,4 +39,8 @@
   --step-6: clamp(3.82rem, calc(2.26rem + 7.80vw), 7.71rem);
   --step-7: clamp(4.77rem, calc(2.56rem + 11.03vw), 10.28rem);
   --step-8: clamp(5.96rem, calc(2.86rem + 15.49vw), 13.71rem);
+}
+
+:root {
+  --multiplier: calc((var(--centerflex-threshold, 38rem) - 100%) * 666);
 }

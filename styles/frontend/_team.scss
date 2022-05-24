@@ -1,6 +1,6 @@
 .team {
-  margin-top: 300px;
-  margin-bottom: 78px;
+  margin-top: var(--space-5xl);
+  margin-bottom: var(--space-2xl);
 
   &__text-container {
     max-width: 50ch;
@@ -47,7 +47,7 @@
     @include breakpointDesktop {
       display: flex;
       flex-grow: 1;
-      margin-top: 200px;
+      margin-top: var(--space-4xl);
     }
 
     &--martin {
@@ -72,13 +72,13 @@
       align-self: flex-end;
       display: flex;
       gap: 5%;
-      margin-bottom: 5%;
+      margin-bottom: var(--space-m);
 
       @include breakpointMobileSmall() {
         display: block;
         text-align: center;
         div {
-          margin-top: 5%;
+          margin-top: var(--space-m);
         }
       }
 

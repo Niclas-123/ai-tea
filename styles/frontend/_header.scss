@@ -1,4 +1,4 @@
-// * {outline: 1px solid red};
+ * {outline: 1px solid red};
 
 header {
   background-color: white;
@@ -6,86 +6,72 @@ header {
   padding-bottom: 25px;
   padding-top: 25px;
 
-  .header-logo-mobile {
-    display: none;
-
-    @include breakpointMobile() {
-      display: block;
-      max-width: 25%;
-      margin: 0 auto 10px auto;
-    }
-  }
-
   .nav-container {
     max-width: 1600px;
-    margin:  0 15% 0 10%;
-    background-color: aqua;
 
-    @include breakpointDesktop() {
-      display: flex;
-      align-items: center
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin: calc(var(--centerflex-gap, 1rem) / 2 * -1) 10%;
+
+    &:before {
+      content: "";
+
+      background-color: aqua;
+      z-index: 2;
+      height: 30px;
+
+      flex-grow: 666;
+      margin: 0;
+      flex-basis: Max(0px, var(--multiplier));
     }
 
+    > * {
+      margin: calc(var(--centerflex-gap, 1rem) / 2) auto;
+
+      &:first-child {
+        order: -1;
+      }
+    }
 
     .header-logo {
       max-width: 180px;
       display: inline;
       margin:  0 auto;
-
-      @include breakpointMobile() {
-        display: none;
-      }
     }
 
     nav {
+      @include breakpointAlbatross() {
+        width: 100%;
+      }
+    }
 
-      ul {
-        padding: 0;
-        list-style: none;
+    ul {
+      padding: 0;
+      list-style: none;
+      font-family: 'bebas_neue';
+      font-size: var(--step-1);
+      white-space: nowrap;
 
-        font-family: 'bebas_neue';
-        font-size: var(--step-1);
+      display: flex;
+      align-items: center;
 
-        flex-wrap: wrap;
-        white-space: nowrap;
-        gap: var(--space-s);
+      .instagram-logo {
+        display: block;
+        line-height: 0;
 
-        display: flex;
-        align-items: center;
-
-        .instagram-logo {
-          display: block;
-          line-height: 0;
-
-          img{
-            height: calc(1.15rem + var(--step-1));
-          }
+        img{
+          height: calc(1.15rem + var(--step-1));
         }
+      }
 
-        @include breakpointMobile() {
-          margin-left: 10%;
-          margin-right: 10%;
 
-          .home {
-            display: none;
-          }
+      @include breakpointAlbatross() {
+        justify-content: space-between;
 
-          li {
-            flex: 1;
-            justify-self: space-around;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-          }
-        }
-
-        @include breakpointDesktop() {
-          justify-content: space-around;
-
-          .button-container {
-            margin-left: auto;
-          }
+        .nav-item-home {
+          display: none;
         }
       }
     }

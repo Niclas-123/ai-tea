@@ -1,8 +1,8 @@
 .sorten {
-  margin-top: 200px;
+  margin-top: var(--space-5xl);
 
   @include breakpointDesktop() {
-    margin-top: 300px;
+    margin-top: var(--space-6xl);
   }
 
   h2 {
@@ -15,7 +15,7 @@
 
   &__container {
     display: flex;
-    margin-bottom: 200px;
+    margin-bottom: var(--space-5xl);
 
     &--right {
       @include breakpointMobile() {

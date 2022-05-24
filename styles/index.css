@@ -393,6 +393,7 @@ figure {
   --space-3xl: clamp(6.00rem, calc(5.10rem + 4.50vw), 8.25rem);
   --space-4xl: clamp(8.00rem, calc(6.80rem + 6.00vw), 11.00rem);
   --space-5xl: clamp(10.00rem, calc(8.50rem + 7.50vw), 13.75rem);
+  --space-6xl: clamp(15.625rem, 13.352rem + 11.36vw, 21.875rem);
   /* One-up pairs */
   --space-3xs-2xs: clamp(0.25rem, calc(0.08rem + 0.88vw), 0.69rem);
   --space-2xs-xs: clamp(0.50rem, calc(0.28rem + 1.13vw), 1.06rem);
@@ -418,6 +419,10 @@ figure {
   --step-6: clamp(3.82rem, calc(2.26rem + 7.80vw), 7.71rem);
   --step-7: clamp(4.77rem, calc(2.56rem + 11.03vw), 10.28rem);
   --step-8: clamp(5.96rem, calc(2.86rem + 15.49vw), 13.71rem);
+}
+
+:root {
+  --multiplier: calc((var(--centerflex-threshold, 38rem) - 100%) * 666);
 }
 
 @font-face {
@@ -471,6 +476,10 @@ a:focus {
   text-decoration: underline;
 }
 
+* {
+  outline: 1px solid red;
+}
+
 header {
   background-color: white;
   color: black;
@@ -478,33 +487,40 @@ header {
   padding-top: 25px;
 }
 
-header .header-logo-mobile {
-  display: none;
-}
-
-@media only screen and (max-width: 56.5625rem) {
-  header .header-logo-mobile {
-    display: block;
-    max-width: 25%;
-    margin: 0 auto 10px auto;
-  }
-}
-
 header .nav-container {
   max-width: 1600px;
-  margin: 0 15% 0 10%;
-  background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: calc(var(--centerflex-gap, 1rem) / 2 * -1) 10%;
 }
 
-@media only screen and (min-width: 56.5625rem) {
-  header .nav-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+header .nav-container:before {
+  content: "";
+  background-color: aqua;
+  z-index: 2;
+  height: 30px;
+  -webkit-box-flex: 666;
+      -ms-flex-positive: 666;
+          flex-grow: 666;
+  margin: 0;
+  -ms-flex-preferred-size: Max(0px, var(--multiplier));
+      flex-basis: Max(0px, var(--multiplier));
+}
+
+header .nav-container > * {
+  margin: calc(var(--centerflex-gap, 1rem) / 2) auto;
+}
+
+header .nav-container > *:first-child {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 header .nav-container .header-logo {
@@ -513,21 +529,18 @@ header .nav-container .header-logo {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 56.5625rem) {
-  header .nav-container .header-logo {
-    display: none;
+@media only screen and (max-width: 47.5rem) {
+  header .nav-container nav {
+    width: 100%;
   }
 }
 
-header .nav-container nav ul {
+header .nav-container ul {
   padding: 0;
   list-style: none;
   font-family: 'bebas_neue';
   font-size: var(--step-1);
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   white-space: nowrap;
-  gap: var(--space-s);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,51 +549,28 @@ header .nav-container nav ul {
           align-items: center;
 }
 
-header .nav-container nav ul .instagram-logo {
+header .nav-container ul .instagram-logo {
   display: block;
   line-height: 0;
 }
 
-header .nav-container nav ul .instagram-logo img {
+header .nav-container ul .instagram-logo img {
   height: calc(1.15rem + var(--step-1));
 }
 
-@media only screen and (max-width: 56.5625rem) {
-  header .nav-container nav ul {
-    margin-left: 10%;
-    margin-right: 10%;
+@media only screen and (max-width: 47.5rem) {
+  header .nav-container ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  header .nav-container nav ul .home {
+  header .nav-container ul .nav-item-home {
     display: none;
-  }
-  header .nav-container nav ul li {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    justify-self: space-around;
-    margin: 0;
-    padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media only screen and (min-width: 56.5625rem) {
-  header .nav-container nav ul {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  header .nav-container nav ul .button-container {
-    margin-left: auto;
   }
 }
 
 .top-section .top-section-container {
-  padding-top: 150px;
+  padding-top: var(--space-3xl);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -668,12 +658,12 @@ header .nav-container nav ul .instagram-logo img {
 }
 
 .sorten {
-  margin-top: 200px;
+  margin-top: var(--space-5xl);
 }
 
 @media only screen and (min-width: 56.5625rem) {
   .sorten {
-    margin-top: 300px;
+    margin-top: var(--space-6xl);
   }
 }
 
@@ -689,7 +679,7 @@ header .nav-container nav ul .instagram-logo img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 200px;
+  margin-bottom: var(--space-5xl);
 }
 
 @media only screen and (max-width: 56.5625rem) {
@@ -824,7 +814,7 @@ header .nav-container nav ul .instagram-logo img {
 
 .primary-button {
   background-color: black;
-  padding: 0.5rem 3rem;
+  padding: 0.5rem var(--space-l);
   border-radius: 1.25rem;
   border: none;
   white-space: nowrap;
@@ -864,8 +854,8 @@ footer .imprint-container a {
 }
 
 .team {
-  margin-top: 300px;
-  margin-bottom: 78px;
+  margin-top: var(--space-5xl);
+  margin-bottom: var(--space-2xl);
 }
 
 .team__text-container {
@@ -921,7 +911,7 @@ footer .imprint-container a {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    margin-top: 200px;
+    margin-top: var(--space-4xl);
   }
 }
 
@@ -959,7 +949,7 @@ footer .imprint-container a {
   display: -ms-flexbox;
   display: flex;
   gap: 5%;
-  margin-bottom: 5%;
+  margin-bottom: var(--space-m);
 }
 
 @media only screen and (max-width: 34.375rem) {
@@ -968,7 +958,7 @@ footer .imprint-container a {
     text-align: center;
   }
   .team__image-container--contact-mobile div {
-    margin-top: 5%;
+    margin-top: var(--space-m);
   }
 }
 

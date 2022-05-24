@@ -12,16 +12,16 @@
   }
 }
 
-@mixin breakpointMobileMedium() {
-  @media only screen and (max-width: 48.125rem) {
-    // 770px
+@mixin breakpointMobileSmall() {
+  @media only screen and (max-width: 34.375rem) {
+    // 550px
     @content;
   }
 }
 
-@mixin breakpointMobileSmall() {
-  @media only screen and (max-width: 34.375rem) {
-    // 550px
+@mixin breakpointAlbatross() {
+  @media only screen and (max-width: 47.5rem) {
+    // 760px
     @content;
   }
 }
