@@ -12,6 +12,11 @@ html {
   /* 2 */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* Sections
    ========================================================================== */
 /**
@@ -39,20 +44,24 @@ h1 {
 
 h2 {
   line-height: var(--step-6);
+  margin: var(--space-l) 0;
 }
 
 h3 {
   line-height: var(--step-8);
+  margin: var(--space-m) 0;
 }
 
 h4 {
   line-height: var(--step-2);
+  margin: var(--space-m) 0;
 }
 
 p {
   line-height: var(--space-m);
   font-weight: 400;
   font-size: var(--step-0);
+  margin: var(--space-s) 0;
 }
 
 /* Grouping content
@@ -382,6 +391,8 @@ figure {
   --space-xl: clamp(3.00rem, calc(2.55rem + 2.25vw), 4.13rem);
   --space-2xl: clamp(4.00rem, calc(3.40rem + 3.00vw), 5.50rem);
   --space-3xl: clamp(6.00rem, calc(5.10rem + 4.50vw), 8.25rem);
+  --space-4xl: clamp(8.00rem, calc(6.80rem + 6.00vw), 11.00rem);
+  --space-5xl: clamp(10.00rem, calc(8.50rem + 7.50vw), 13.75rem);
   /* One-up pairs */
   --space-3xs-2xs: clamp(0.25rem, calc(0.08rem + 0.88vw), 0.69rem);
   --space-2xs-xs: clamp(0.50rem, calc(0.28rem + 1.13vw), 1.06rem);
@@ -391,6 +402,8 @@ figure {
   --space-l-xl: clamp(2.00rem, calc(1.15rem + 4.25vw), 4.13rem);
   --space-xl-2xl: clamp(3.00rem, calc(2.00rem + 5.00vw), 5.50rem);
   --space-2xl-3xl: clamp(4.00rem, calc(2.30rem + 8.50vw), 8.25rem);
+  --space-3xl-4xl: clamp(6.00rem, calc(4.00rem + 10.00vw), 11.00rem);
+  --space-4xl-5xl: clamp(8.00rem, calc(5.70rem + 11.50vw), 13.75rem);
   /* Custom pairs */
   --space-s-l: clamp(1.00rem, calc(0.30rem + 3.50vw), 2.75rem);
 }
@@ -419,9 +432,11 @@ figure {
 }
 
 body {
-  background-color: black;
   overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-image: url("/images/other/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 html {
@@ -435,9 +450,6 @@ html {
   max-width: 1600px;
   position: relative;
   margin: 0 auto;
-  background-image: url("/images/other/background.jpg");
-  background-size: cover;
-  background-attachment: fixed;
   overflow: hidden;
 }
 
@@ -473,13 +485,15 @@ header .header-logo-mobile {
 @media only screen and (max-width: 56.5625rem) {
   header .header-logo-mobile {
     display: block;
-    width: 25%;
+    max-width: 25%;
     margin: 0 auto 10px auto;
   }
 }
 
 header .nav-container {
   max-width: 1600px;
+  margin: 0 15% 0 10%;
+  background-color: aqua;
 }
 
 @media only screen and (min-width: 56.5625rem) {
@@ -490,12 +504,11 @@ header .nav-container {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0 14.3%;
   }
 }
 
 header .nav-container .header-logo {
-  width: 180px;
+  max-width: 180px;
   display: inline;
   margin: 0 auto;
 }
@@ -506,41 +519,21 @@ header .nav-container .header-logo {
   }
 }
 
-@media only screen and (min-width: 56.5625rem) {
-  header .nav-container nav {
-    -webkit-box-flex: 8;
-        -ms-flex-positive: 8;
-            flex-grow: 8;
-  }
-}
-
 header .nav-container nav ul {
   padding: 0;
   list-style: none;
   font-family: 'bebas_neue';
   font-size: var(--step-1);
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   white-space: nowrap;
+  gap: var(--space-s);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@media only screen and (max-width: 56.5625rem) {
-  header .nav-container nav ul li {
-    -ms-grid-column-align: space-between;
-        justify-self: space-between;
-  }
 }
 
 header .nav-container nav ul .instagram-logo {
@@ -549,7 +542,7 @@ header .nav-container nav ul .instagram-logo {
 }
 
 header .nav-container nav ul .instagram-logo img {
-  width: 55px;
+  height: calc(1.15rem + var(--step-1));
 }
 
 @media only screen and (max-width: 56.5625rem) {
@@ -557,8 +550,22 @@ header .nav-container nav ul .instagram-logo img {
     margin-left: 10%;
     margin-right: 10%;
   }
-  header .nav-container nav ul .menu {
+  header .nav-container nav ul .home {
     display: none;
+  }
+  header .nav-container nav ul li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    justify-self: space-around;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -567,22 +574,8 @@ header .nav-container nav ul .instagram-logo img {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  header .nav-container nav ul .menu-mobile {
-    display: none;
-  }
-  header .nav-container nav ul .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin: 0 5%;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
   header .nav-container nav ul .button-container {
-    margin-right: 4.5%;
+    margin-left: auto;
   }
 }
 
@@ -647,13 +640,13 @@ header .nav-container nav ul .instagram-logo img {
     width: 30%;
     margin: 0 auto;
     position: relative;
-    max-width: 100%;
   }
 }
 
 .top-section .top-section-container .logo-container__logo {
   position: relative;
   width: 100%;
+  color: white;
 }
 
 .top-section .top-section-container .logo-container__bio-logos {
@@ -787,18 +780,18 @@ header .nav-container nav ul .instagram-logo img {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0px;
-  padding-top: 10%;
+  padding-top: 2rem;
 }
 
 @media only screen and (min-width: 56.5625rem) {
-  .sorten__text-container--left p, .sorten__text-container--left h4, .sorten__text-container--left h3 {
-    padding-left: 30%;
+  .sorten__text-container--left div {
+    padding-left: 15%;
   }
 }
 
 @media only screen and (min-width: 56.5625rem) {
-  .sorten__text-container--right * {
-    width: 70%;
+  .sorten__text-container--right div {
+    padding-right: 15%;
   }
 }
 
@@ -812,7 +805,7 @@ header .nav-container nav ul .instagram-logo img {
 
 @media only screen and (min-width: 56.5625rem) {
   .sorten__text-container h3 {
-    margin: 0 0 0 -50px;
+    text-indent: -0.25em;
   }
 }
 
@@ -876,13 +869,13 @@ footer .imprint-container a {
 }
 
 .team__text-container {
-  width: 80%;
+  max-width: 50ch;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 56.5625rem) {
   .team__text-container {
-    width: 42.5%;
+    max-width: 70ch;
   }
 }
 
@@ -992,9 +985,6 @@ footer .imprint-container a {
 }
 
 .team__image-container--image {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1003,9 +993,27 @@ footer .imprint-container a {
           justify-content: center;
 }
 
+@media only screen and (min-width: 56.5625rem) {
+  .team__image-container--image {
+    max-width: 50%;
+  }
+}
+
 .team__image-container img {
   padding: 1%;
   background-color: white;
-  width: 80%;
+  max-width: 90%;
+}
+
+.only-sr {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
 /*# sourceMappingURL=index.css.map */

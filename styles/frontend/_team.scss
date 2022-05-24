@@ -3,11 +3,11 @@
   margin-bottom: 78px;
 
   &__text-container {
-    width: 80%;
+    max-width: 50ch;
     margin: 0 auto;
 
     @include breakpointDesktop() {
-      width: 42.5%;
+      max-width: 70ch;
     }
 
     h2 {
@@ -92,15 +92,17 @@
     }
 
     &--image {
-      flex: 1 1 0px;
       display: flex;
       justify-content: center;
+      @include breakpointDesktop() {
+        max-width: 50%;
+      }
     }
 
     img {
       padding: 1%;
       background-color: white;
-      width: 80%;
+      max-width: 90%;
     }
   }
 }

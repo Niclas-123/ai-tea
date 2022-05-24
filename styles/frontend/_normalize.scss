@@ -13,6 +13,11 @@
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* Sections
    ========================================================================== */
 
@@ -44,20 +49,24 @@ h1 {
 
 h2 {
   line-height: var(--step-6);
+  margin: var(--space-l) 0;
 }
 
 h3 {
   line-height: var(--step-8);
+  margin: var(--space-m) 0;
 }
 
 h4 {
   line-height: var(--step-2);
+  margin: var(--space-m) 0;
 }
 
 p {
   line-height: var(--space-m);
   font-weight: 400;
   font-size: var(--step-0);
+  margin: var(--space-s) 0;
 }
 
 /* Grouping content

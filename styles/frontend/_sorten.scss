@@ -103,17 +103,21 @@
 
   &__text-container {
     flex: 1 1 0px;
-    padding-top: 10%;
+    padding-top: 2rem;
 
     &--left {
       @include breakpointDesktop() {
-        p, h4, h3 {padding-left: 30%;}
+        div {
+          padding-left: 15%;
+        }
       }
     }
 
     &--right {
       @include breakpointDesktop() {
-        * { width: 70% };
+        div {
+          padding-right: 15%;
+        }
       }
     }
 
@@ -125,7 +129,7 @@
       white-space: nowrap;
 
       @include breakpointDesktop() {
-        margin: 0 0 0 -50px;
+        text-indent: -0.25em;
       }
     }
 
