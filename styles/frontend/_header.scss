@@ -1,5 +1,3 @@
- * {outline: 1px solid red};
-
 header {
   background-color: white;
   color: black;
@@ -13,16 +11,11 @@ header {
     flex-wrap: wrap;
     align-items: center;
 
-    margin: calc(var(--centerflex-gap, 1rem) / 2 * -1) 10%;
+    margin: calc(var(--centerflex-gap, 1rem) / 2 * -1) 10vw;
 
     &:before {
       content: "";
-
-      background-color: aqua;
-      z-index: 2;
-      height: 30px;
-
-      flex-grow: 666;
+      flex-grow: 1;
       margin: 0;
       flex-basis: Max(0px, var(--multiplier));
     }
@@ -42,6 +35,8 @@ header {
     }
 
     nav {
+      flex-grow: 100000;
+
       @include breakpointAlbatross() {
         width: 100%;
       }
@@ -56,13 +51,43 @@ header {
 
       display: flex;
       align-items: center;
+      justify-content: space-around;
 
       .instagram-logo {
         display: block;
         line-height: 0;
 
-        img{
+        img {
           height: calc(1.15rem + var(--step-1));
+        }
+      }
+
+      .nav-item {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+
+        &__instagram {
+          flex-grow: 0;
+        }
+
+        &__home{
+          flex-grow: 2;
+          margin-left: 3vw;
+        }
+
+        &__sorten {
+          flex-grow: 2;
+        }
+
+        &__team {
+          flex-grow: 2;
+          margin-right: 3vw;
+        }
+
+        &__button {
+          flex-grow: 1;
+          justify-content: flex-start;
         }
       }
 
@@ -70,8 +95,14 @@ header {
       @include breakpointAlbatross() {
         justify-content: space-between;
 
-        .nav-item-home {
-          display: none;
+        .nav-item {
+          display: block;
+          margin: 0;
+          flex-grow: 0;
+
+          &__home {
+            display: none;
+          }
         }
       }
     }

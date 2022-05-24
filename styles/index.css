@@ -476,10 +476,6 @@ a:focus {
   text-decoration: underline;
 }
 
-* {
-  outline: 1px solid red;
-}
-
 header {
   background-color: white;
   color: black;
@@ -497,17 +493,14 @@ header .nav-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: calc(var(--centerflex-gap, 1rem) / 2 * -1) 10%;
+  margin: calc(var(--centerflex-gap, 1rem) / 2 * -1) 10vw;
 }
 
 header .nav-container:before {
   content: "";
-  background-color: aqua;
-  z-index: 2;
-  height: 30px;
-  -webkit-box-flex: 666;
-      -ms-flex-positive: 666;
-          flex-grow: 666;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   margin: 0;
   -ms-flex-preferred-size: Max(0px, var(--multiplier));
       flex-basis: Max(0px, var(--multiplier));
@@ -529,6 +522,12 @@ header .nav-container .header-logo {
   margin: 0 auto;
 }
 
+header .nav-container nav {
+  -webkit-box-flex: 100000;
+      -ms-flex-positive: 100000;
+          flex-grow: 100000;
+}
+
 @media only screen and (max-width: 47.5rem) {
   header .nav-container nav {
     width: 100%;
@@ -547,6 +546,8 @@ header .nav-container ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 header .nav-container ul .instagram-logo {
@@ -558,13 +559,67 @@ header .nav-container ul .instagram-logo img {
   height: calc(1.15rem + var(--step-1));
 }
 
+header .nav-container ul .nav-item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .nav-container ul .nav-item__instagram {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+header .nav-container ul .nav-item__home {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  margin-left: 3vw;
+}
+
+header .nav-container ul .nav-item__sorten {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+header .nav-container ul .nav-item__team {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  margin-right: 3vw;
+}
+
+header .nav-container ul .nav-item__button {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 @media only screen and (max-width: 47.5rem) {
   header .nav-container ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  header .nav-container ul .nav-item-home {
+  header .nav-container ul .nav-item {
+    display: block;
+    margin: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  header .nav-container ul .nav-item__home {
     display: none;
   }
 }
