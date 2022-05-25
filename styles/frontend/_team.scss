@@ -1,6 +1,5 @@
 .team {
-  margin-top: var(--space-5xl);
-  margin-bottom: var(--space-2xl);
+  margin: var(--space-5xl) var(--space-m) var(--space-2xl) var(--space-m);
 
   &__text-container {
     max-width: 50ch;

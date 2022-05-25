@@ -517,9 +517,9 @@ header .nav-container > *:first-child {
 }
 
 header .nav-container .header-logo {
-  max-width: 180px;
-  display: inline;
+  width: 180px;
   margin: 0 auto;
+  fill: black;
 }
 
 header .nav-container nav {
@@ -695,7 +695,6 @@ header .nav-container ul .nav-item__button {
 .top-section .top-section-container .logo-container__logo {
   position: relative;
   width: 100%;
-  color: white;
 }
 
 .top-section .top-section-container .logo-container__bio-logos {
@@ -913,8 +912,7 @@ footer .imprint-container a {
 }
 
 .team {
-  margin-top: var(--space-5xl);
-  margin-bottom: var(--space-2xl);
+  margin: var(--space-5xl) var(--space-m) var(--space-2xl) var(--space-m);
 }
 
 .team__text-container {
