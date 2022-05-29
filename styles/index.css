@@ -1063,4 +1063,16 @@ footer .imprint-container a {
   width: 1px;
   white-space: nowrap;
 }
+
+.policy-container {
+  margin: 10vh 10vw;
+}
+
+.policy-container h2 {
+  font-family: 'bebas_neue';
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: var(--step-6);
+  text-align: center;
+}
 /*# sourceMappingURL=index.css.map */
