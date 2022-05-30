@@ -1068,11 +1068,34 @@ footer .imprint-container a {
   margin: 10vh 10vw;
 }
 
+.policy-container h1 {
+  font-family: 'bebas_neue';
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: var(--step-4);
+  text-align: center;
+}
+
 .policy-container h2 {
   font-family: 'bebas_neue';
   text-transform: uppercase;
   font-weight: 700;
-  font-size: var(--step-6);
-  text-align: center;
+  font-size: var(--step-3);
+  line-height: var(--step-5);
+  margin: 0;
+  padding: 0;
+}
+
+.policy-container h3 {
+  font-family: 'bebas_neue';
+  font-weight: 700;
+  font-size: var(--step-2);
+  line-height: var(--step-5);
+  margin: 0;
+  padding: 0;
+}
+
+.policy-container section {
+  margin-top: var(--space-2xl);
 }
 /*# sourceMappingURL=index.css.map */
