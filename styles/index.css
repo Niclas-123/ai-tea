@@ -1095,7 +1095,30 @@ footer .imprint-container a {
   padding: 0;
 }
 
+.policy-container h4 {
+  font-family: 'bebas_neue';
+  font-style: italic;
+  font-size: var(--step-1);
+  line-height: var(--step-3);
+  margin: 0;
+  padding: 0;
+}
+
 .policy-container section {
   margin-top: var(--space-2xl);
+}
+
+.policy-container a {
+  color: #fff090;
+}
+
+.policy-container ul, .policy-container ol {
+  margin-left: var(--space-xl);
+}
+
+.policy-container li {
+  font-weight: 400;
+  line-height: var(--step-2);
+  font-size: var(--step-0);
 }
 /*# sourceMappingURL=index.css.map */
