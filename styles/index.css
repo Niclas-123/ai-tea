@@ -439,10 +439,19 @@ figure {
 body {
   overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background-image: url("/images/other/background.jpg");
+}
+
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url("/images/other/background.jpg") no-repeat center center;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 html {
@@ -1082,27 +1091,27 @@ footer .imprint-container a {
   text-transform: uppercase;
   font-weight: 700;
   font-size: var(--step-3);
-  line-height: var(--step-5);
+  line-height: var(--step-3);
   margin: 0;
-  padding: 0;
+  padding: var(--space-l) 0;
 }
 
 .policy-container h3 {
   font-family: 'bebas_neue';
   font-weight: 700;
   font-size: var(--step-2);
-  line-height: var(--step-5);
+  line-height: var(--step-2);
   margin: 0;
-  padding: 0;
+  padding: var(--space-m) 0;
 }
 
 .policy-container h4 {
   font-family: 'bebas_neue';
   font-style: italic;
   font-size: var(--step-1);
-  line-height: var(--step-3);
+  line-height: var(--step-1);
   margin: 0;
-  padding: 0;
+  padding: var(--space-s) 0;
 }
 
 .policy-container section {
