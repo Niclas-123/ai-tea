@@ -54,7 +54,7 @@
       background-color: white;
       mix-blend-mode: overlay;
       position: absolute;
-      z-index: 1;
+      z-index: -10;
 
       width: 100%;
       top: 10%;
@@ -64,11 +64,6 @@
         width: 120%;
         top: 12%;
         right: 12%;
-      }
-
-      @include breakpointMobile() {
-        mix-blend-mode: normal;
-        opacity: 0.4;
       }
     }
 

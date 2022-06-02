@@ -795,7 +795,7 @@ header .nav-container ul .nav-item__button {
   background-color: white;
   mix-blend-mode: overlay;
   position: absolute;
-  z-index: 1;
+  z-index: -10;
   width: 100%;
   top: 10%;
   right: 22%;
@@ -806,13 +806,6 @@ header .nav-container ul .nav-item__button {
     width: 120%;
     top: 12%;
     right: 12%;
-  }
-}
-
-@media only screen and (max-width: 56.5625rem) {
-  .sorten__bottle-container:before {
-    mix-blend-mode: normal;
-    opacity: 0.4;
   }
 }
 
