@@ -51,6 +51,7 @@
       content: "";
       aspect-ratio: 1;
       border-radius: 50%;
+      background-color: white;
       mix-blend-mode: overlay;
       position: absolute;
       z-index: 1;
@@ -63,6 +64,11 @@
         width: 120%;
         top: 12%;
         right: 12%;
+      }
+
+      @include breakpointMobile() {
+        mix-blend-mode: normal;
+        opacity: 0.4;
       }
     }
 

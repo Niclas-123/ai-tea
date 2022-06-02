@@ -792,6 +792,7 @@ header .nav-container ul .nav-item__button {
   content: "";
   aspect-ratio: 1;
   border-radius: 50%;
+  background-color: white;
   mix-blend-mode: overlay;
   position: absolute;
   z-index: 1;
@@ -805,6 +806,13 @@ header .nav-container ul .nav-item__button {
     width: 120%;
     top: 12%;
     right: 12%;
+  }
+}
+
+@media only screen and (max-width: 56.5625rem) {
+  .sorten__bottle-container:before {
+    mix-blend-mode: normal;
+    opacity: 0.4;
   }
 }
 
@@ -894,8 +902,8 @@ header .nav-container ul .nav-item__button {
 }
 
 footer {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   padding: var(--space-m) 0;
   font-size: var(--step-0);
 }
